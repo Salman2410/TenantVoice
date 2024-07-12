@@ -1,11 +1,13 @@
 import React from "react";
-import img1 from "../assets/Scene.png";
-import img2 from "../assets/shot.png";
-import img3 from "../assets/spot.png";
-import img4 from "../assets/my-home.png";
-import img5 from "../assets/Large_Browsing_Location.png";
-import img6 from "../assets/A_Nice_House_.png";
-import img7 from "../assets/Domain_News_circle.png";
+import img1 from '../../assets/Scene.png';
+import img2 from '../../assets/shot.png';
+import img3 from '../../assets/spot.png';
+import img4 from '../../assets/my-home.png';
+import img5 from '../../assets/Large_Browsing_Location.png';
+import img6 from '../../assets/A_Nice_House_.png';
+import img7 from '../../assets/Domain_News_circle.png';
+
+
 
 const Sell = () => {
   return (
