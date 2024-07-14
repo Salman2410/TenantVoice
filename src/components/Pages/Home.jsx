@@ -20,8 +20,8 @@ const Home = () => {
               key={category}
               className={`px-4 py-2 rounded-full border transition-colors duration-300 ${
                 activeCategory === category
-                  ? "border-2 border-pink-500 text-black"
-                  : "border-black text-gray-500 hover:border-green-300 hover:text-black"
+                  ? "border-2 border-[#104f7f] text-black"
+                  : "border-black text-gray-500 hover:border-[#1c8ce2] hover:text-black"
               }`}
               onClick={() => setActiveCategory(category)}
             >

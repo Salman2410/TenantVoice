@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Search from "./search";
+import Modal from "../Modal"
 import img1 from "../../assets/Propertysearch.avif";
 
 const tabs = ["Buy", "Rent", "Sold", "Address", "Agents"];
 
 const PropertySearch = () => {
   const [activeTab, setActiveTab] = useState("Buy");
+ 
 
   return (
     <div

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 import Modal from "../Modal";
-import Propertyfilterform from "./Propertyfiterform";
+import Propertyfilterform from "./Propertyfilterform";
 
 const mockSuggestions = [
   { type: "postcode", value: "2770" },
@@ -28,8 +28,8 @@ const Search = () => {
     setIsModalVisible(false);
   };
 
-  const handleSubmitFilter = (data) => {
-    console.log("Filter Submitted", data);
+  const handleSubmitFilter = () => {
+    console.log("Filter Submitted", selectedItems);
     handleCloseModal();
   };
 
@@ -75,7 +75,7 @@ const Search = () => {
             >
               {item.value}
               <button
-                className="ml-2 text-[#1c8ce2]"
+                className="ml-2 text-red-500"
                 onClick={() => handleRemoveSelectedItem(item.value)}
               >
                 &times;
@@ -114,7 +114,7 @@ const Search = () => {
             <Propertyfilterform onSubmit={handleSubmitFilter} />
           </Modal>
           <button
-            className="bg-[#1c8ce2] text-white p-2 rounded-lg"
+            className="bg-red-500 text-white p-2 rounded-lg"
             onClick={handleSearch}
           >
             Search

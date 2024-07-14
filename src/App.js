@@ -9,6 +9,10 @@ import Signup from "./components/Pages/SignUp";
 import RoleSelector from "./components/RoleSelector";
 import Tenant from "./components/Pages/Tenant";
 import Lanlord from "./components/Pages/Landlord";
+import Propertylisting from "./components/Property/Propertylisting";
+import Modal from 'react-modal';
+
+Modal.setAppElement('#root');
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
           <Route path="/tenant" element={<Tenant />} />
           <Route path="/owner" element={<Lanlord />} />
           <Route path="/role" element={<RoleSelector/>} />
+          console.log('listing');
+          <Route path ="/propertylisting" element={<Propertylisting/>}/>
+         
           
         </Routes>
         <Footer />
