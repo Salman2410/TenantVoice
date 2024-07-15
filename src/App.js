@@ -11,6 +11,8 @@ import Tenant from "./components/Pages/Tenant";
 import Lanlord from "./components/Pages/Landlord";
 import Propertylisting from "./components/Property/Propertylisting";
 import Modal from 'react-modal';
+import Review from "./components/Pages/Review";
+import AnonymousReview from "./components/Pages/AnonymousReview";
 
 Modal.setAppElement('#root');
 
@@ -27,9 +29,9 @@ function App() {
           <Route path="/tenant" element={<Tenant />} />
           <Route path="/owner" element={<Lanlord />} />
           <Route path="/role" element={<RoleSelector/>} />
-          console.log('listing');
           <Route path ="/propertylisting" element={<Propertylisting/>}/>
-         
+          <Route path ="/reviews" element={<Review/>}/>
+          <Route path ="/anonymous" element={<AnonymousReview/>}/>
           
         </Routes>
         <Footer />

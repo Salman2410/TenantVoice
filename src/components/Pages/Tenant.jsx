@@ -6,6 +6,8 @@ import ReviewCard from "../Review/ReviewCard";
 import AddReviewButton from "../Review/AddReviewButton";
 import Modal from "../Modal"
 import ReviewForm from "../Review/ReviewForm"
+import PropertyInfo from "../Property/PropertyInfo";
+import SimilarProperty from "../Property/SimilarProperty";
 
 const Tenant = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -28,6 +30,7 @@ const Tenant = () => {
         <div className="flex flex-col md:flex-row w-[70%] mx-auto items-start">
           <div className="md:w-1/2 p-4">
             <ImageGallery />
+            <PropertyInfo/>
           </div>
           <div className="md:w-1/2 p-4">
             <PropertyCard
@@ -42,6 +45,7 @@ const Tenant = () => {
           </div>
         </div>
       </section>
+      <SimilarProperty/>
       <section className="bg-[#F8F6F1] py-10">
         <h2 className="underline text-center text-3xl text-[#061938]">
           Reviews
