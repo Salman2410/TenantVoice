@@ -39,6 +39,21 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
+##Application Routes
+This application consists of several routes that serve different components of the interface:
+
+Home (/): Displays the homepage of the application.
+Register (/register): Route for user registration, leading to the Signup component.
+Sell (/sell): A page where users can list items or services for sale.
+Tenant (/tenant): Dedicated section for tenants in the application.
+Owner/Landlord (/owner): Interface section specifically for property owners or landlords.
+Role Selector (/role): Allows users to select their role within the application (e.g., tenant, landlord).
+Property Listing (/propertylisting): Displays a list of available properties.
+Reviews (/reviews): Where users can read or submit reviews.
+Anonymous Reviews (/anonymous): Allows users to submit reviews anonymously.
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
