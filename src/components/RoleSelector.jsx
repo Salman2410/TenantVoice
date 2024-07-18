@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { BsPersonBadge } from "react-icons/bs"; // Icon for roles
 
 const roles = [
@@ -49,6 +50,13 @@ const HiringCard = ({ role, onSelect, isSelected }) => {
 
 const RoleSelector = () => {
   const [selectedRole, setSelectedRole] = useState(null);
+  const navigate = useNavigate();
+
+  const handleCreateAccount = () => {
+    if (selectedRole) {
+      navigate("/register"); // Navigate to '/register' when button is clicked
+    }
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
@@ -70,14 +78,15 @@ const RoleSelector = () => {
             : "bg-gray-300 text-gray-600 cursor-not-allowed"
         }`}
         disabled={!selectedRole}
+        onClick={handleCreateAccount}
       >
         Create Account
       </button>
       <p className="mt-4">
         Already have an account?{" "}
-        <a href="#" className="text-[#1c8ce2]">
+        <NavLink to="/login" className="text-[#1c8ce2]">
           Log In
-        </a>
+        </NavLink>
       </p>
     </div>
   );

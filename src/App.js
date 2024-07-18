@@ -13,6 +13,7 @@ import Propertylisting from "./components/Property/Propertylisting";
 import Modal from 'react-modal';
 import Review from "./components/Pages/Review";
 import AnonymousReview from "./components/Pages/AnonymousReview";
+import Reviewpage from "./components/Pages/Reviewpage";
 
 Modal.setAppElement('#root');
 
@@ -23,7 +24,7 @@ function App() {
         <Navbar />
         <Routes>
         <Route path="/" element={<Home/>} />
-        {/* <Route path="/" element={<Login/>} /> */}
+        <Route path="/login" element={<Login/>} />
           <Route path="/register" element={<Signup/>}/>
           <Route path="/sell" element={<Sell />} />
           <Route path="/tenant" element={<Tenant />} />
@@ -31,6 +32,7 @@ function App() {
           <Route path="/role" element={<RoleSelector/>} />
           <Route path ="/propertylisting" element={<Propertylisting/>}/>
           <Route path ="/reviews" element={<Review/>}/>
+          <Route path ="/reviewpage" element={<Reviewpage/>}/>
           <Route path ="/anonymous" element={<AnonymousReview/>}/>
           
         </Routes>
