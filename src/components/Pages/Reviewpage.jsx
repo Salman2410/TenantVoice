@@ -160,6 +160,21 @@ const Reviewpage = () => {
           </div>
         </div>
       </section>
+      <div className="mt-4 grid grid-cols-1 gap-4 pt-4 sm:grid-cols-2">
+        <div className="rounded-xl border border-[#DFE1E6]">
+          <div className="float-right">
+            <div className="flex justify-end space-x-2 rounded-tr-xl rounded-bl-md bg-[#FFF0B3] px-2 py-1"></div>
+          </div>
+          <div className="border-b border-[#DFE1E6] p-4">
+            <div className="flex items-end space-x-2 pt-1 "></div>
+            <div className="min-h-[50px] pt-2 text-sm text-[#253858]"></div>
+          </div>
+          <div className="rounded-b-xl border-[#FAFBFC] p-4">
+            <div className="text-sm font-semibold text-[#505F79]"></div>
+            <div className="pt-2 text-sm text-[#505F79]"></div>
+             </div>
+        </div>
+      </div>
     </>
   );
 };

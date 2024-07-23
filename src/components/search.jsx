@@ -1,5 +1,5 @@
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 import Modal from "../Modal";
 import Propertyfilterform from "./Propertyfilterform";
 
@@ -13,6 +13,18 @@ const mockSuggestions = [
   { type: "postcode", value: "2778" },
   // Add more mock suggestions for suburbs and states if needed
 ];
+
+const containerStyle = {
+  width: "100%",
+  height: "400px",
+  borderRadius: "8px",
+  overflow: "hidden",
+};
+
+const center = {
+  lat: -25.274398,
+  lng: 133.775136,
+};
 
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -66,7 +78,7 @@ const Search = () => {
 
   return (
     <div className="">
-      <div className="w-full max-w-2xl p-4 bg-white shadow-md rounded-lg">
+      <div className="w-full max-w-2xl p-4  shadow-md rounded-lg mb-8">
         <div className="flex flex-wrap gap-2 mb-2">
           {selectedItems.map((item, index) => (
             <div
@@ -120,6 +132,20 @@ const Search = () => {
             Search
           </button>
         </div>
+      </div>
+      <div className="relative mt-4 mb-4 w-full max-w-2xl mx-auto">
+        <LoadScript
+          googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
+          key={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
+        >
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={center}
+            zoom={4}
+          >
+            {/* Child components, such as markers, info windows, etc. */}
+          </GoogleMap>
+        </LoadScript>
       </div>
     </div>
   );

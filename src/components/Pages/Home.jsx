@@ -1,42 +1,27 @@
 import React, { useState } from "react";
-import PropertySearch from "../Property/PropertySearch";
+import Search from "../Property/search";
 import CardContainer from "../Property/Card-property";
 import ReviewSearch from "../Review/SearchReview";
+import TabButtons from "../Button/Tabbutton";
+import PropertyCarousel from "./HomeCard";
 
 const categories = ["Buying", "Renting", "Selling", "Researching"];
 
 const Home = () => {
   const [activeCategory, setActiveCategory] = useState("Buying");
-  const [activeTab, setActiveTab] = useState("propertySearch"); // Default to propertySearch
+  const [activeTab, setActiveTab] = useState("propertySearch");
 
   return (
-    <div>
-      <div className=" flex justify-center space-x-8 my-4">
-        <button
-          onClick={() => setActiveTab("reviewSearch")} // Set activeTab to reviewSearch
-          className={`text-lg font-medium pb-1 ${
-            activeTab === "reviewSearch"
-              ? " text-purple-900 border-b-2 border-purple-900"
-              : " text-gray-400"
-          } hover: hover:text-purple-900 rounded`}
-        >
-          Read Reviews
-        </button>
-        <button
-          onClick={() => setActiveTab("propertySearch")} // Set activeTab to propertySearch
-          className={`text-lg font-medium pb-1 ${
-            activeTab === "propertySearch"
-              ? " text-purple-900 border-b-2 border-purple-900"
-              : " text-gray-400"
-          } hover: hover:text-purple-900 rounded`}
-        >
-          Rent Apartments
-        </button>
+    <div className="min-h-screen bg-gray-400 py-10">
+      <div className="w-[80%] mx-auto my-10 rounded-2xl flex flex-col items-center justify-center bg-gray-800 shadow-lg">
+        <div className="bg-gray-800 p-4 rounded-lg  w-1/2 mx-auto">
+          <TabButtons activeTab={activeTab} setActiveTab={setActiveTab} />
+          {activeTab === "reviewSearch" ? <ReviewSearch /> : <Search />}
+        </div>
       </div>
-      {activeTab === "reviewSearch" ? <ReviewSearch /> : <PropertySearch />}
-      <div className="w-[70%] mx-auto">
-        <h2 className="text-2xl text-[#3D3B40] font-bold">
-          Explore all things property
+      <div className="w-[80%] mx-auto mt-8">
+        <h2 className="text-3xl text-gray-800 font-bold mb-6">
+          Discover Properties
         </h2>
         <div className="flex space-x-4 my-4">
           {categories.map((category) => (
@@ -44,8 +29,8 @@ const Home = () => {
               key={category}
               className={`px-4 py-2 rounded-full border transition-colors duration-300 ${
                 activeCategory === category
-                  ? "border-2 border-[#104f7f] text-black"
-                  : "border-black text-gray-500 hover:border-[#1c8ce2] hover:text-black"
+                  ? "border-2 border-dark-cerulean text-black"
+                  : "border-black text-gray-500 hover:border-bleu-de-france hover:text-black"
               }`}
               onClick={() => setActiveCategory(category)}
             >
@@ -53,7 +38,8 @@ const Home = () => {
             </button>
           ))}
         </div>
-        <CardContainer />
+        
+        <PropertyCarousel/>
       </div>
     </div>
   );

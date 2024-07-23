@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
   },
 });
 
-// Add a request interceptor to include the authorization token
+
 axiosInstance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token'); // Adjust as per your auth implementation

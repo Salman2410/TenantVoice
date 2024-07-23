@@ -14,6 +14,11 @@ import Modal from 'react-modal';
 import Review from "./components/Pages/Review";
 import AnonymousReview from "./components/Pages/AnonymousReview";
 import Reviewpage from "./components/Pages/Reviewpage";
+import UserDashboard from "./components/Pages/UserDashboard";
+import Track from "./components/Pages/Track";
+import Drop from "./components/Pages/drop";
+import Setting from "./components/Pages/setting/Setting"
+import Collection from "./components/Pages/collections/Collection";
 
 Modal.setAppElement('#root');
 
@@ -34,7 +39,11 @@ function App() {
           <Route path ="/reviews" element={<Review/>}/>
           <Route path ="/reviewpage" element={<Reviewpage/>}/>
           <Route path ="/anonymous" element={<AnonymousReview/>}/>
-          
+          <Route path ="/tenantdashboard" element={<UserDashboard/>}/>
+          <Route path ="/track" element={<Track/>}/>
+          <Route path ="/drop" element={<Drop/>}/>
+          <Route path ="/Setting" element={<Setting/>}/>
+          <Route path ="/Collection" element={<Collection/>}/>
         </Routes>
         <Footer />
       </Router>
