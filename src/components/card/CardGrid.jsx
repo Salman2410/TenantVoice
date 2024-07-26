@@ -34,7 +34,7 @@ const cardData = [
     title: "Renter Profile",
     description: "Create or update your Renter Profile.",
     imgSrc: image4,
-    link: "/page1",
+    link: "/RenterProfile",
   },
   {
     title: "Rental applications",

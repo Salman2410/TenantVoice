@@ -19,6 +19,11 @@ import Track from "./components/Pages/Track";
 import Drop from "./components/Pages/drop";
 import Setting from "./components/Pages/setting/Setting"
 import Collection from "./components/Pages/collections/Collection";
+import RenterProfile from "./components/Pages/Renter/Renter-profile";
+import PersonalDetail from "./components/Pages/Renter/PersonalDetail";
+import Aboutme from "./components/Pages/Renter/Aboutme";
+import AddressHistory from "./components/Pages/Renter/AddressHistory";
+import Employment from "./components/Pages/Renter/Employment";
 
 Modal.setAppElement('#root');
 
@@ -44,6 +49,12 @@ function App() {
           <Route path ="/drop" element={<Drop/>}/>
           <Route path ="/Setting" element={<Setting/>}/>
           <Route path ="/Collection" element={<Collection/>}/>
+          <Route path ="/RenterProfile" element={<RenterProfile/>}/>
+          <Route path ="/PersonalDetail" element={<PersonalDetail/>}/>
+          <Route path ="/Aboutme" element={<Aboutme/>}/>
+          <Route path ="/AddressHistory" element={<AddressHistory/>}/>
+          <Route path ="/EmploymentStatus" element={<Employment/>}/>
+
         </Routes>
         <Footer />
       </Router>
