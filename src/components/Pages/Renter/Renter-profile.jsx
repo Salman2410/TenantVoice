@@ -6,9 +6,9 @@ const sections = [
   { name: "About me", path: "/Aboutme" },
   { name: "Address history", path: "/AddressHistory" },
   { name: "Employment", path: "/EmploymentStatus" },
-  { name: "Income" },
-  { name: "Identity documents" },
-  { name: "Emergency contact" },
+  { name: "Income", path: "/Income" },
+  { name: "Identity documents", path: "/Identify" },
+  { name: "Emergency contact", path: "/EmergencyContact" },
   {
     name: "Tenant check (recommended)",
     description:
@@ -17,9 +17,9 @@ const sections = [
 ];
 
 const additionalSections = [
-  { name: "People" },
-  { name: "Pets" },
-  { name: "Utility connection service" },
+  { name: "People", path: "/People" },
+  { name: "Pets", path: "/Pet" },
+  { name: "Utility connection service" , path: "/Utility"},
 ];
 
 const ProfileSections = () => {

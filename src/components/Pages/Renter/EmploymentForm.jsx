@@ -37,8 +37,8 @@ const EmploymentForm = () => {
   });
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-6">
-      <div className="max-w-lg w-full mr-[39rem] bg-white shadow-md rounded-lg p-6">
+    <div className="min-h-screen flex items-center justify-center bg-white p-6">
+      <div className="max-w-lg w-full absolute left-[165px] top-[210px] rounded-lg p-6">
         <h1 className="text-xl font-semibold mb-4">Employment</h1>
         <p className="mb-6">
           Add your current employment information and help verify your details

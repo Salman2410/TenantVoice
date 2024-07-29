@@ -24,6 +24,12 @@ import PersonalDetail from "./components/Pages/Renter/PersonalDetail";
 import Aboutme from "./components/Pages/Renter/Aboutme";
 import AddressHistory from "./components/Pages/Renter/AddressHistory";
 import Employment from "./components/Pages/Renter/Employment";
+import Income from "./components/Pages/Renter/Income";
+import Identify from "./components/Pages/Renter/Identify";
+import EmergencyContacts from "./components/Pages/Renter/EmergencyContacts";
+import People from "./components/Pages/Renter/People";
+import Pet from "./components/Pages/Renter/Pet";
+import Utility from "./components/Pages/Renter/Utility";
 
 Modal.setAppElement('#root');
 
@@ -54,6 +60,12 @@ function App() {
           <Route path ="/Aboutme" element={<Aboutme/>}/>
           <Route path ="/AddressHistory" element={<AddressHistory/>}/>
           <Route path ="/EmploymentStatus" element={<Employment/>}/>
+          <Route path ="/Income" element={<Income/>}/>
+          <Route path ="/Identify" element={<Identify/>}/>
+          <Route path ="/EmergencyContact" element={<EmergencyContacts/>}/>
+          <Route path ="/People" element={<People/>}/>
+          <Route path ="/Pet" element={<Pet/>}/>
+          <Route path ="/Utility" element={<Utility/>}/>
 
         </Routes>
         <Footer />
