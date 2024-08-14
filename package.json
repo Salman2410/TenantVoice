@@ -22,7 +22,7 @@
     "react-modal": "^3.16.1",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.24.1",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-share-social": "^0.1.60",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
